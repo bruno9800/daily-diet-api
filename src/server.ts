@@ -70,9 +70,41 @@ app.get('/', (request, response) => {
           },
           {
             method: "POST",
-            do: "Cria uma refeição para o usuário logado"
+            do: "Cria uma refeição para o usuário logado",
+            body: {
+              "name": "example",
+              "describe": "example",
+              "is_diet": "true | false"
+            }
           }
         ]
+      },
+      {
+        path: "/:username/meals/:id",
+        do: "Rotas de refeições para um usuário específico",
+        methods: [
+          {
+            method: "GET",
+            do: "Visualizar uma refeição específica"
+          },
+          {
+            method: "DELETE",
+            do: "Deletar uma refeição específica"
+          },
+          {
+            method: "PUT",
+            do: "Modifica uma refeição",
+            body: {
+              "name": "example",
+              "describe": "example",
+              "is_diet": "true | false"
+            }
+          }
+        ]
+      },
+      {
+        path: "/:username:meals/summary",
+        do: "resumo da dieta do usuário logado"
       }
     ]
   })

@@ -29,3 +29,6 @@
 - [x] O usuário não pode ter sua senha exposta no banco de dados
 - [x] O usuário não pode visualizar dados sensiveis de outros usuários
 - [x] Sempre que o login for bem sucedido, uma sessão desse usuário deve ser iniciada
+
+### Detalhes das rotas 
+  na raiz do projeto __"/"__, existe um guia com todas as rotas criadas
